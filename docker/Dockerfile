@@ -6,7 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb [by-hash=no] http://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64 /" > /etc/apt/sources.list.d/cuda.list
 
-RUN apt update && apt upgrade
+RUN apt update && apt upgrade -y
 RUN apt update && apt install -y \
     wget git libsuitesparse-dev libeigen3-dev libboost-all-dev \
     libopencv-dev
